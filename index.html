@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        <title>Fight</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="#">
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    </head>
+    <body class="body">
+
+        <!-- INTRO CONTAINER -->
+        <!-- <div class="introContainer">
+            <video class="introVideo" style="position: fixed; margin: auto; padding: 0; margin: 0;" width="1250px" height="700px"  autoplay onended="introVideoEnd();" onclick="introVideoEnd();">
+                <source type="video/webm" src="video/intro.mp4" type="video/mp4">
+            </video>
+        </div> -->
+
+        <!-- MAIN MENU CONTAINER -->
+        <div class="menuContainer">
+            <div class="menuContainerInner">
+                <div class="kingsbusinessLogoMenu"></div>
+                <div class="menuInfo">
+                    <p>Witamy! </br> KINGSBUSINESS to prosta grze przeglarkowa o żądzie zemsty </br> Kiedy tylko będziesz graczu gotowy, wpisz swoje imię poniżej oraz klinij: </br> w DROGĘ!</p>
+                </div>
+                <div class="playerSection">
+                    <div class="errorMsg"></div>
+                    <input type="text" class="playerName" placeholder="Podaj imię bohatera">
+                    <div class="toAdventure">
+                        W DROGĘ!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIGHT CONTAINER -->
+        <div class="fightContainer">
+
+            <div class="backgroundImgContainer">
+                <div class="backgroundImg">
+                    <div class="enemySpeechImg">
+                        <div class="enemySpeechImgInner">
+                            <p class="enemySpeech"></p> 
+                        </div>
+                    </div>
+                    <div class="enemyImg"></div>
+                </div>
+            </div>
+
+            <div class="bossHPcontainer">
+                <div class="bossHPtitleContainer">
+                    <p class="bossHPtitle"></p>
+                    <p class="bossHPcounter"></p>
+                </div>
+                <div class="bossHPbarContainer">
+                    <div class="bossHP">
+                        <div class="bossHPactual"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consoleLogContainer">
+                <div class="consoleLogChat">
+                    <div class="consoleLog">
+                        <p class="consoleLogs"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playerContainer">
+
+                <div class="actionsContainer">
+                    <div class="playerActionContainer">
+                        <div class="AttackBtnContainer">
+                            <div class="AttackBtn">Atak</div>
+                        </div>
+                        <div class="spellBtnContainer">
+                            <div class="spellBtnInfo">
+                                <p class="spellBtnInfoText"></p>
+                                <p class="spellBtnInfoStats"></p>
+                            </div>
+                            <div class="spellBtn">
+                                <p class="spellBtnTitle">Zaklęcie</p>
+                                <p class="spellBtnLoadingCounter"></p>
+                            </div>
+                        </div>
+                        <div class="itemBtnContainer">
+                            <div class="itemBtnInfo">
+                                <p class="itemBtnInfoText"></p>
+                                <img class="itemBtnImg" alt="item">
+                                <p class="itemBtnStatsText"></p>
+                            </div>
+                            <div class="itemBtnLoading"></div>
+                            <div class="itemBtn">
+                                <p class="itemBtnTitle">Przedmiot</p>
+                                <p class="itemBtnLoadingCounter"></p>
+                            </div>
+                        </div>
+                        <div class="shieldBtnContainer">
+                            <div class="shieldBtnInfo">
+                                <p class="shieldBtnInfoText"></p>
+                                <img class="shieldBtnImg" alt="item">
+                                <p class="shieldBtnStatsText"></p>
+                            </div>
+                            <div class="shieldBtnLoading"></div>
+                            <div class="shieldBtn">
+                                <p class="shieldBtnTitle">Tarcza</p>
+                                <p class="shieldBtnLoadingCounter"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yourHPtitleContainer">
+                        <p class="yourHPtitle">Your HP</p>
+                        <p class="yourHPcounter"></p>
+                    </div>
+                    <div class="otherActionsContainer">
+                        <div class="turnBtnContainer">
+                            <div class="turnBtn">
+                                <div class="turnBtnInner">
+                                    <div class="yourTurnBtn">
+                                        <p>Twój ruch</p>
+                                    </div>
+                                    <div class="bossTurnBtn">
+                                        <img class="bossTurnBtnImg" src="img/Hourglass.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="yourHPcontainer">
+                    <div class="yourHPbarContainer">
+                        <div class="yourHP">
+                            <div class="yourHPactual"></div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="modalShade">
+            <div class="modal">
+                <div class="modalInner">
+                    <div class="modalMainMenuBtn">Wyjście</div>
+                    <p class="modalText"></p>
+                    <div class="modalStats">
+                        <p class="reward"></p>
+                        <p class="xp"></p>
+                    </div>
+                    <p class="upgradeText">Chcesz coś ulepszyć?</p>
+                    <div class="upgradesBtnsContainer">
+                        <div class="upgradeSpellBtnContainer">
+                            <div class="upgradeSpellBtnInfo">
+                                <p class="upgradeSpellBtnInfoText"></p>
+                                <p class="upgradeSpellBtnInfoStats"></p>
+                                <p class="upgradeSpellBtnInfoCost"></p>
+                            </div>
+                            <div class="upgradeSpellBtn">Zaklęcie</div>
+                        </div>
+                        <div class="upgradeItemBtnContainer">
+                            <div class="upgradeItemBtnInfo">
+                                <p class="upgradeItemBtnInfoText"></p>
+                                <img class="upgradeItemBtnImg" alt="sword">
+                                <p class="upgradeItemBtnInfoStats"></p>
+                                <p class="upgradeItemBtnInfoCost"></p>
+                            </div>
+                            <div class="upgradeItemBtn">Przedmiot</div>
+                        </div>
+                        <div class="upgradeShieldBtnContainer">
+                            <div class="upgradeShieldBtnInfo">
+                                <p class="upgradeShieldBtnInfoText"></p>
+                                <img class="upgradeShieldBtnImg" alt="sword">
+                                <p class="upgradeShieldBtnInfoStats"></p>
+                                <p class="upgradeShieldBtnInfoCost"></p>
+                            </div>
+                            <div class="upgradeShieldBtn">Tarcza</div>
+                        </div>
+                        
+                    </div>
+                    <div class="modalBtnsContainer">
+                        <div class="modalOkBtn">Kontynuuj</div>
+                        <div class="modalTryAgainBtn">Jeszcze raz</div>
+                        <div class="modalEpilogueBtn">Epilog</div>
+                    </div>
+                </div>
+                <!-- <div class="modalLvlUp">
+                    <p class="lvlUp"></p>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="storyBackground">
+            <p class="story"></p>
+            <div class="storyBtnContainer">
+                <div class="storyMainMenuBtn">Wyjście</div>
+                <div class="fightBtn">
+                    <p class="fightBtnText">walka</p>
+                    <img class="fightBtnIcon" src="img/swordFight.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="blackBackground">
+            <p class="blackBackgroundParapgrah">Ładowanie</p>
+        </div>
+            
+        <div class="bloodScreen"></div>  
+        
+        <div class="burnEffect"></div>
+
+        <div class="healingEffect"></div>
+        
+        <script src="app.js"></script>
+
+    </body>
+</html>
